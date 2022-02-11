@@ -1,6 +1,17 @@
 export const GAME_TITLE = 'Creek Birdle'
 
-export const WIN_MESSAGES = ['A true ornithologist', 'Mr. Kraft would be proud']
+export const WIN_MESSAGES = ['A budding ornithologist!',
+                             'Mr. Kraft would be proud.',
+                             'Bird-brain...?',
+                             'The early bird gets the worm!',
+                             'Toucan play at this game...',
+                             'Beak performance!',
+                             'Way to wing it!',
+                             'A jack of owl trades!',
+                             'You\'re a know-it-owl...',
+                             'Hoot have thought it\'d be so easy?',
+                             'You have an eagle eye for this game!',
+                             'Wren did you get so good?']
 export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
 export const ABOUT_GAME_MESSAGE = 'About Birdle'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Not enough letters'
