@@ -11,7 +11,9 @@ export const WIN_MESSAGES = ['A budding ornithologist!',
                              'You\'re a know-it-owl...',
                              'Hoot have thought it\'d be so easy?',
                              'You have an eagle eye for this game!',
-                             'Wren did you get so good?']
+                             'Wren did you get so good?',
+                             'Your talent is taking flight!',
+                             'Birds are raven\' about your skills!']
 export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
 export const ABOUT_GAME_MESSAGE = 'About Birdle'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Not enough letters'
