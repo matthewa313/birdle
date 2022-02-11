@@ -8,9 +8,9 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal title="How to Play Creek Birdle" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Guess the word in 6 tries. After each guess, the color of the tiles will
+        Guess the bird-related word in 6 tries. After each guess, the color of the tiles will
         change to show how close your guess was to the word.
       </p>
 
