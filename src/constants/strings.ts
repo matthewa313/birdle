@@ -1,6 +1,6 @@
-export const GAME_TITLE = 'Birdle'
+export const GAME_TITLE = 'Creek Birdle'
 
-export const WIN_MESSAGES = ['Great Job!', 'Awesome', 'Well done!']
+export const WIN_MESSAGES = ['A true ornithologist', 'Mr. Kraft would be proud']
 export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
 export const ABOUT_GAME_MESSAGE = 'About Birdle'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Not enough letters'
