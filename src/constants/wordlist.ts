@@ -3,5 +3,6 @@ export const WORDS = [
   'chick',
   'egret',
   'macaw',
+  'doves',
   'loons'
 ]
