@@ -1,4 +1,4 @@
-export const GAME_TITLE = 'Creek Birdle'
+export const GAME_TITLE = 'Birdle'
 
 export const WIN_MESSAGES = ['A budding ornithologist!',
                              'Mr. Kraft would be proud.',
