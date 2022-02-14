@@ -15,7 +15,6 @@ export const WIN_MESSAGES = ['A budding ornithologist!',
                              'Birds are raven\' about your skills!']
 
 export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
-export const ABOUT_GAME_MESSAGE = 'About Birdle'
 
 export const HARD_MODE_ALERT_MESSAGE =
   'Hard Mode can only be enabled at the start!'
