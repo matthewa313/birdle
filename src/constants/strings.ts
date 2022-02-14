@@ -18,6 +18,9 @@ export const WIN_MESSAGES = ['A budding ornithologist!',
 export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
 export const ABOUT_GAME_MESSAGE = 'About Birdle'
 
+export const HARD_MODE_ALERT_MESSAGE =
+  'Hard Mode can only be enabled at the start!'
+
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Not enough letters'
 export const WORD_NOT_FOUND_MESSAGE = 'Try a bird-related word'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
