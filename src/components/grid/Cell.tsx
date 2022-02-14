@@ -40,12 +40,12 @@ export const Cell = ({
        // normal mode
       'correct shadowed bg-green-500 text-white border-green-500':
         status === 'correct' && !isHighContrast && !isLove,
-      'present shadowed bg-yellow-500 text-white border-blue-500':
+      'present shadowed bg-blue-500 text-white border-blue-500':
         status === 'present' && !isHighContrast && !isLove,
       // love mode
-      'correct shadowed bg-green-500 text-white border-red-500':
+      'correct shadowed bg-red-500 text-white border-red-500':
         status === 'correct' && !isHighContrast && isLove,
-      'present shadowed bg-yellow-500 text-white border-pink-500':
+      'present shadowed bg-pink-500 text-white border-pink-500':
         status === 'present' && !isHighContrast && isLove,
       'cell-fill-animation': isFilled,
       'cell-reveal': shouldReveal,
