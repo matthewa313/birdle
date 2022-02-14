@@ -45,7 +45,7 @@ export const Cell = ({
       // love mode
       'correct shadowed bg-red-500 text-white border-red-500':
         status === 'correct' && isLove,
-      'present shadowed bg-pink-500 text-white border-pink-500':
+      'present shadowed bg-pink-300 text-white border-pink-300':
         status === 'present' && isLove,
       'cell-fill-animation': isFilled,
       'cell-reveal': shouldReveal,
