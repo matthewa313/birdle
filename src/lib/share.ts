@@ -30,7 +30,7 @@ export const generateEmojiGrid = (guesses: string[]) => {
                 return '🧡'
               }
               if (isLove) {
-                return '❤️‍🔥'
+                return '❤️'
               }
               return '💚'
             case 'present':
