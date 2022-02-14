@@ -49,7 +49,7 @@ export const SettingsModal = ({
           handleFlag={handleHighContrastMode}
         />
         <SettingsToggle
-          settingName="High Contrast Mode"
+          settingName="Love Mode"
           flag={isLoveMode}
           handleFlag={handleLoveMode}
         />
