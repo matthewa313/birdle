@@ -146,8 +146,8 @@ function App() {
   }
   
   const handleLoveMode = (isLove: boolean) => {
-    setIsHighContrastMode(isLove)
-    setStoredIsHighContrastMode(isLove)
+    setIsLoveMode(isLove)
+    setStoredIsLoveMode(isLove)
   }
 
   useEffect(() => {
