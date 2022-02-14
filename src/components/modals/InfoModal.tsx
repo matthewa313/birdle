@@ -46,6 +46,16 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <p className="text-sm text-gray-500 dark:text-gray-300">
         The letter W is not in the word in any spot.
       </p>
+      
+      <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
+        Concept by Steele Billings. Code by Matthew Anderson. This is open source -{' '}
+        <a
+          href="https://github.com/matthewa313/birdle"
+          className="underline font-bold"
+        >
+          check out the code here.
+        </a>{' '}
+      </p>
     </BaseModal>
   )
 }
