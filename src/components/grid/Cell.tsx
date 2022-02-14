@@ -25,11 +25,11 @@ export const Cell = ({
   const isLove = getStoredIsLoveMode()
 
   const classes = classnames(
-    'w-14 h-14 border-solid border-2 flex items-center justify-center mx-0.5 text-4xl font-bold rounded dark:text-white',
+    'w-14 h-14 border-solid border-2 flex items-center justify-center mx-0.5 text-4xl font-bold dark:text-white',
     {
       'bg-transparent dark:bg-transparent border-slate-200 dark:border-slate-600':
         !status,
-      'bg-white dark:bg-slate-90 border-black dark:border-slate-100': value && !status,
+      'bg-white dark:bg-slate-900 border-black dark:border-slate-900': value && !status,
       'absent shadowed bg-slate-400 dark:bg-slate-700 text-white border-slate-400 dark:border-slate-700':
         status === 'absent',
        // high contrast mode
