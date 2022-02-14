@@ -39,7 +39,7 @@ export const SettingsModal = ({
           handleFlag={handleHardMode}
         />
         <SettingsToggle
-          settingName="Dark Mode"
+          settingName="Bird Mode"
           flag={isDarkMode}
           handleFlag={handleDarkMode}
         />
