@@ -1,7 +1,6 @@
 export const GAME_TITLE = 'Birdle'
 
 export const WIN_MESSAGES = ['A budding ornithologist!',
-                             'Mr. Kraft would be proud.',
                              'You\'re no bird-brain.',
                              'The early bird gets the worm!',
                              'Toucan play at this game...',
