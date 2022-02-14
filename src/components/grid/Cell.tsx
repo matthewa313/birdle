@@ -47,6 +47,11 @@ export const Cell = ({
         status === 'correct' && !isHighContrast && isLove,
       'present shadowed bg-pink-500 text-white border-pink-500':
         status === 'present' && !isHighContrast && isLove,
+      
+      'correct shadowed bg-red-500 text-white border-red-500':
+        status === 'correct' && isHighContrast && isLove,
+      'present shadowed bg-pink-500 text-white border-pink-500':
+        status === 'present' && isHighContrast && isLove,
       'cell-fill-animation': isFilled,
       'cell-reveal': shouldReveal,
     }
