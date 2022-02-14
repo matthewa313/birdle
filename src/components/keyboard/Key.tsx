@@ -40,12 +40,12 @@ export const Key = ({
       
       'bg-green-500 hover:bg-green-600 active:bg-green-700 text-white':
         status === 'correct' && !isHighContrast && !isLove,
-      'bg-yellow-500 hover:bg-yellow-600 active:bg-blue-700 text-white':
+      'bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white':
         status === 'present' && !isHighContrast && !isLove,
       
-      'bg-green-500 hover:bg-green-600 active:bg-red-700 text-white':
+      'bg-red-500 hover:bg-red-600 active:bg-red-700 text-white':
         status === 'correct' && !isHighContrast && isLove,
-      'bg-yellow-500 hover:bg-yellow-600 active:bg-pink-700 text-white':
+      'bg-pink-500 hover:bg-pink-600 active:bg-pink-700 text-white':
         status === 'present' && !isHighContrast && isLove,
     }
   )
