@@ -14,14 +14,22 @@ export const WIN_MESSAGES = ['A budding ornithologist!',
                              'Wren did you get so good?',
                              'Your talent is taking flight!',
                              'Birds are raven\' about your skills!']
+
 export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
 export const ABOUT_GAME_MESSAGE = 'About Birdle'
+
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Not enough letters'
 export const WORD_NOT_FOUND_MESSAGE = 'Try a bird-related word'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
-  `The word was ${solution}`
+  `The bird was ${solution}`
+export const WRONG_SPOT_MESSAGE = (guess: string, position: number) =>
+  `Must use ${guess} in position ${position}`
+export const NOT_CONTAINED_MESSAGE = (letter: string) =>
+  `Guess must contain ${letter}`
+
 export const ENTER_TEXT = 'Enter'
 export const DELETE_TEXT = 'Delete'
+
 export const STATISTICS_TITLE = 'Statistics'
 export const GUESS_DISTRIBUTION_TEXT = 'Guess Distribution'
 export const NEW_WORD_TEXT = 'New bird in...'
