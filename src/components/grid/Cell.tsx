@@ -29,7 +29,7 @@ export const Cell = ({
     {
       'bg-transparent dark:bg-transparent border-slate-200 dark:border-slate-600':
         !status,
-      'border-black dark:border-slate-100': value && !status,
+      'bg-white dark:bg-slate-90 border-black dark:border-slate-100': value && !status,
       'absent shadowed bg-slate-400 dark:bg-slate-700 text-white border-slate-400 dark:border-slate-700':
         status === 'absent',
        // high contrast mode
