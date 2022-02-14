@@ -37,6 +37,10 @@ import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
+  setStoredIsHighContrastMode,
+  getStoredIsHighContrastMode,
+  setStoredIsLoveMode,
+  getStoredIsLoveMode,
 } from './lib/localStorage'
 
 import './App.css'
@@ -53,7 +57,9 @@ function App() {
   const [isNotEnoughLetters, setIsNotEnoughLetters] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
+  const [isHardModeAlertOpen, setIsHardModeAlertOpen] = useState(false)
   const [isWordNotFoundAlertOpen, setIsWordNotFoundAlertOpen] = useState(false)
+  const [currentRowClass, setCurrentRowClass] = useState('')
   const [isGameLost, setIsGameLost] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.getItem('theme')
@@ -61,6 +67,12 @@ function App() {
       : prefersDarkMode
       ? true
       : false
+  )
+  const [isHighContrastMode, setIsHighContrastMode] = useState(
+    getStoredIsHighContrastMode()
+  )
+  const [isLoveMode, setIsLoveMode] = useState(
+    getStoredIsLoveMode()
   )
   const [successAlert, setSuccessAlert] = useState('')
   const [isRevealing, setIsRevealing] = useState(false)
@@ -97,7 +109,19 @@ function App() {
     } else {
       document.documentElement.classList.remove('dark')
     }
-  }, [isDarkMode])
+
+    if (isHighContrastMode) {
+      document.documentElement.classList.add('high-contrast')
+    } else {
+      document.documentElement.classList.remove('high-contrast')
+    }
+    
+    if (isLoveMode) {
+      document.documentElement.classList.add('love')
+    } else {
+      document.documentElement.classList.remove('love')
+    }
+  }, [isDarkMode, isHighContrastMode, isLoveMode])
 
   const handleDarkMode = (isDark: boolean) => {
     setIsDarkMode(isDark)
@@ -105,8 +129,25 @@ function App() {
   }
 
   const handleHardMode = (isHard: boolean) => {
-    setIsHardMode(isHard)
-    localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
+    if (guesses.length === 0 || localStorage.getItem('gameMode') === 'hard') {
+      setIsHardMode(isHard)
+      localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
+    } else {
+      setIsHardModeAlertOpen(true)
+      return setTimeout(() => {
+        setIsHardModeAlertOpen(false)
+      }, ALERT_TIME_MS)
+    }
+  }
+
+  const handleHighContrastMode = (isHighContrast: boolean) => {
+    setIsHighContrastMode(isHighContrast)
+    setStoredIsHighContrastMode(isHighContrast)
+  }
+  
+  const handleLoveMode = (isLove: boolean) => {
+    setIsHighContrastMode(isLove)
+    setStoredIsHighContrastMode(isLove)
   }
 
   useEffect(() => {
@@ -153,15 +194,19 @@ function App() {
     }
     if (!(currentGuess.length === MAX_WORD_LENGTH)) {
       setIsNotEnoughLetters(true)
+      setCurrentRowClass('jiggle')
       return setTimeout(() => {
         setIsNotEnoughLetters(false)
+        setCurrentRowClass('')
       }, ALERT_TIME_MS)
     }
 
     if (!isWordInWordList(currentGuess)) {
       setIsWordNotFoundAlertOpen(true)
+      setCurrentRowClass('jiggle')
       return setTimeout(() => {
         setIsWordNotFoundAlertOpen(false)
+        setCurrentRowClass('')
       }, ALERT_TIME_MS)
     }
 
@@ -171,8 +216,10 @@ function App() {
       if (firstMissingReveal) {
         setIsMissingLetterMessage(firstMissingReveal)
         setIsMissingPreviousLetters(true)
+        setCurrentRowClass('jiggle')
         return setTimeout(() => {
           setIsMissingPreviousLetters(false)
+          setCurrentRowClass('')
         }, ALERT_TIME_MS)
       }
     }
@@ -229,6 +276,7 @@ function App() {
         guesses={guesses}
         currentGuess={currentGuess}
         isRevealing={isRevealing}
+        currentRowClassName={currentRowClass}
       />
       <Keyboard
         onChar={onChar}
@@ -265,6 +313,11 @@ function App() {
         handleHardMode={handleHardMode}
         isDarkMode={isDarkMode}
         handleDarkMode={handleDarkMode}
+        isHardModeErrorModalOpen={isHardModeAlertOpen}
+        isHighContrastMode={isHighContrastMode}
+        handleHighContrastMode={handleHighContrastMode}
+        isLoveMode={isLoveMode}
+        handleLoveMode={handleLoveMode}
       />
 
       <button
