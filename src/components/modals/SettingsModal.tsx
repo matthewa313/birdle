@@ -14,7 +14,7 @@ type Props = {
   isHighContrastMode: boolean
   handleHighContrastMode: Function
   isLoveMode: boolean
-  handleLoveMode: boolean
+  handleLoveMode: Function
 }
 
 export const SettingsModal = ({
