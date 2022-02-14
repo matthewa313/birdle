@@ -44,14 +44,9 @@ export const Key = ({
         status === 'present' && !isHighContrast && !isLove,
       
       'bg-red-500 hover:bg-red-600 active:bg-red-700 text-white':
-        status === 'correct' && !isHighContrast && isLove,
+        status === 'correct' && isLove,
       'bg-pink-500 hover:bg-pink-600 active:bg-pink-700 text-white':
-        status === 'present' && !isHighContrast && isLove,
-      
-      'bg-red-500 hover:bg-red-600 active:bg-red-700 text-white':
-        status === 'correct' && isHighContrast && isLove,
-      'bg-pink-500 hover:bg-pink-600 active:bg-pink-700 text-white':
-        status === 'present' && isHighContrast && isLove,
+        status === 'present' && isLove,
     }
   )
 
