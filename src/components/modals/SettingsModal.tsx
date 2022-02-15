@@ -13,8 +13,6 @@ type Props = {
   isHardModeErrorModalOpen: boolean
   isHighContrastMode: boolean
   handleHighContrastMode: Function
-  isLoveMode: boolean // valentine's
-  handleLoveMode: Function
 }
 
 export const SettingsModal = ({
@@ -27,8 +25,6 @@ export const SettingsModal = ({
   isHardModeErrorModalOpen: isHardModeAlertModalOpen,
   isHighContrastMode,
   handleHighContrastMode,
-  isLoveMode,
-  handleLoveMode,
 }: Props) => {
   return (
     <BaseModal title="Settings" isOpen={isOpen} handleClose={handleClose}>
