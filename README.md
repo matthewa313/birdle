@@ -72,6 +72,7 @@ Open [http://localhost](http://localhost) in browser.
 - ['en si lì'ur](https://tirea.learnnavi.org/wordle): Na'vi, the constructed language from James Cameron's AVATAR (2009)
 - [Wordle.cl](https://www.wordle.cl): Chilean modisms, cities, places
 - [Anidal](https://anidal-abrarhayat.web.app/): Animals
+- [Birdle](https://www.creek-birdle.com/): Birds
 - [FFXIVrdle](https://ffxivrdle.com/): Final Fantasy XIV
 - [Harry Potter](https://www.harrypotterwordle.com/): Harry Potter
 
