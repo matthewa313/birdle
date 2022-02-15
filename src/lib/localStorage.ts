@@ -1,6 +1,5 @@
 const gameStateKey = 'gameState'
 const highContrastKey = 'highContrast'
-const loveKey = 'love'
 
 type StoredGameState = {
   guesses: string[]
@@ -47,17 +46,4 @@ export const setStoredIsHighContrastMode = (isHighContrast: boolean) => {
 export const getStoredIsHighContrastMode = () => {
   const highContrast = localStorage.getItem(highContrastKey)
   return highContrast === '1'
-}
-
-export const setStoredIsLoveMode = (isLove: boolean) => {
-  if (isLove) {
-    localStorage.setItem(loveKey, '1')
-  } else {
-    localStorage.removeItem(loveKey)
-  }
-}
-
-export const getStoredIsLoveMode = () => {
-  const love = localStorage.getItem(loveKey)
-  return love === '1'
 }
