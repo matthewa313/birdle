@@ -27,25 +27,19 @@ export const generateEmojiGrid = (guesses: string[]) => {
           switch (status[i]) {
             case 'correct':
               if (isHighContrast) {
-                return '🧡'
+                return '🟧'
               }
-              if (isLove) {
-                return '❤️'
-              }
-              return '💚'
+              return '🟩'
             case 'present':
               if (isHighContrast) {
-                return '💙'
+                return '🟦'
               }
-              if (isLove) {
-                return '💖'
-              }
-              return '💙'
+              return '🟦'
             default:
               if (localStorage.getItem('theme') === 'dark') {
-                return '🖤'
+                return '⬛️'
               }
-              return '🤍'
+              return '⬜️'
           }
         })
         .join('')
