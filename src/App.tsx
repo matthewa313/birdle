@@ -37,8 +37,6 @@ import {
   saveGameStateToLocalStorage,
   setStoredIsHighContrastMode,
   getStoredIsHighContrastMode,
-  setStoredIsLoveMode,
-  getStoredIsLoveMode,
 } from './lib/localStorage'
 
 import './App.css'
@@ -67,9 +65,6 @@ function App() {
   )
   const [isHighContrastMode, setIsHighContrastMode] = useState(
     getStoredIsHighContrastMode()
-  )
-  const [isLoveMode, setIsLoveMode] = useState(
-    getStoredIsLoveMode()
   )
   const [successAlert, setSuccessAlert] = useState('')
   const [isRevealing, setIsRevealing] = useState(false)
@@ -112,13 +107,7 @@ function App() {
     } else {
       document.documentElement.classList.remove('high-contrast')
     }
-    
-    if (isLoveMode) {
-      document.documentElement.classList.add('love')
-    } else {
-      document.documentElement.classList.remove('love')
-    }
-  }, [isDarkMode, isHighContrastMode, isLoveMode])
+  }, [isDarkMode, isHighContrastMode])
 
   const handleDarkMode = (isDark: boolean) => {
     setIsDarkMode(isDark)
@@ -140,11 +129,6 @@ function App() {
   const handleHighContrastMode = (isHighContrast: boolean) => {
     setIsHighContrastMode(isHighContrast)
     setStoredIsHighContrastMode(isHighContrast)
-  }
-  
-  const handleLoveMode = (isLove: boolean) => {
-    setIsLoveMode(isLove)
-    setStoredIsLoveMode(isLove)
   }
 
   useEffect(() => {
@@ -309,8 +293,6 @@ function App() {
         isHardModeErrorModalOpen={isHardModeAlertOpen}
         isHighContrastMode={isHighContrastMode}
         handleHighContrastMode={handleHighContrastMode}
-        isLoveMode={isLoveMode}
-        handleLoveMode={handleLoveMode}
       />
 
       <Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
