@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import classnames from 'classnames'
 import { CharStatus } from '../../lib/statuses'
 import { MAX_WORD_LENGTH, REVEAL_TIME_MS } from '../../constants/settings'
-import { getStoredIsHighContrastMode, getStoredIsLoveMode } from '../../lib/localStorage'
+import { getStoredIsHighContrastMode } from '../../lib/localStorage'
 
 type Props = {
   children?: ReactNode
@@ -23,7 +23,6 @@ export const Key = ({
 }: Props) => {
   const keyDelayMs = REVEAL_TIME_MS * MAX_WORD_LENGTH
   const isHighContrast = getStoredIsHighContrastMode()
-  const isLove = getStoredIsLoveMode()
 
   const classes = classnames(
     'flex items-center justify-center rounded mx-0.5 text-xs font-bold cursor-pointer select-none dark:text-white',
