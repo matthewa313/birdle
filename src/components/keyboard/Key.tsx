@@ -34,19 +34,14 @@ export const Key = ({
       'bg-slate-400 dark:bg-slate-800 text-white': status === 'absent',
       
       'bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white':
-        status === 'correct' && isHighContrast && !isLove,
+        status === 'correct' && isHighContrast,
       'bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white':
-        status === 'present' && isHighContrast && !isLove,
+        status === 'present' && isHighContrast,
       
       'bg-green-500 hover:bg-green-600 active:bg-green-700 text-white':
-        status === 'correct' && !isHighContrast && !isLove,
+        status === 'correct' && !isHighContrast,
       'bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white':
-        status === 'present' && !isHighContrast && !isLove,
-      
-      'bg-red-500 hover:bg-red-600 active:bg-red-700 text-white':
-        status === 'correct' && isLove,
-      'bg-pink-500 hover:bg-pink-600 active:bg-pink-700 text-white':
-        status === 'present' && isLove,
+        status === 'present' && !isHighContrast,
     }
   )
 
