@@ -13,7 +13,7 @@ type Props = {
   isHardModeErrorModalOpen: boolean
   isHighContrastMode: boolean
   handleHighContrastMode: Function
-  isLoveMode: boolean
+  isLoveMode: boolean // valentine's
   handleLoveMode: Function
 }
 
@@ -39,7 +39,7 @@ export const SettingsModal = ({
           handleFlag={handleHardMode}
         />
         <SettingsToggle
-          settingName="Bird Mode"
+          settingName="Dark Mode"
           flag={isDarkMode}
           handleFlag={handleDarkMode}
         />
@@ -47,11 +47,6 @@ export const SettingsModal = ({
           settingName="Contrast Mode"
           flag={isHighContrastMode}
           handleFlag={handleHighContrastMode}
-        />
-        <SettingsToggle
-          settingName="Love Mode"
-          flag={isLoveMode}
-          handleFlag={handleLoveMode}
         />
         <Alert
           message={HARD_MODE_ALERT_MESSAGE}
