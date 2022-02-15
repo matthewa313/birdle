@@ -34,19 +34,14 @@ export const Cell = ({
         status === 'absent',
        // high contrast mode
       'correct shadowed bg-orange-500 text-white border-orange-500':
-        status === 'correct' && isHighContrast && !isLove,
+        status === 'correct' && isHighContrast,
       'present shadowed bg-cyan-500 text-white border-cyan-500':
-        status === 'present' && isHighContrast && !isLove,
+        status === 'present' && isHighContrast,
        // normal mode
       'correct shadowed bg-green-500 text-white border-green-500':
-        status === 'correct' && !isHighContrast && !isLove,
+        status === 'correct' && !isHighContrast,
       'present shadowed bg-blue-500 text-white border-blue-500':
-        status === 'present' && !isHighContrast && !isLove,
-      // love mode
-      'correct shadowed bg-red-500 text-white border-red-500':
-        status === 'correct' && isLove,
-      'present shadowed bg-pink-300 text-white border-pink-300':
-        status === 'present' && isLove,
+        status === 'present' && !isHighContrast,
       'cell-fill-animation': isFilled,
       'cell-reveal': shouldReveal,
     }
