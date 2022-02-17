@@ -7,10 +7,12 @@ export const WORDS = [
   'hawks', // Tue Feb 15
   'finch', // Wed Feb 16
   'heron', // Thu Feb 17
-  'booby', // Fri Feb 18
-  'loons',
-  'raven',
-  'eagle',
-  'wrens',
-  'quail'
+  'raven', // Fri Feb 18
+  'loons', // Sat
+  'robin', // Sun
+  'eagle', // Mon
+  'wrens', // Tue
+  'ducks', // Wed
+  'booby', // Thu
+  'quail' // Fri
 ]
