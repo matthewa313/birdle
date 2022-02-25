@@ -14,5 +14,14 @@ export const WORDS = [
   'wrens', // Tue
   'ducks', // Wed
   'booby', // Thu
-  'quail' // Fri
+  'quail', // Fri
+  'gulls',
+  'owlet',
+  'kiwis',
+  'larks',
+  'crane',
+  'swans',
+  'dodos',
+  'rheas',
+  
 ]
