@@ -4,6 +4,7 @@ import {
   CogIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
+import { Adsense } from '@ctrl/react-adsense'
 import { Alert } from './components/alerts/Alert'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
@@ -94,7 +95,7 @@ function App() {
   const [isMissingPreviousLetters, setIsMissingPreviousLetters] =
     useState(false)
   const [missingLetterMessage, setIsMissingLetterMessage] = useState('')
-  
+
   useEffect(() => {
     // if no game state on load,
     // show the user the how-to info modal
@@ -245,9 +246,7 @@ function App() {
   return (
     <div className="pt-2 pb-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-8 mt-20">
-        <h1 className="text-xl ml-2.5 grow font-bold">
-          {GAME_TITLE}
-        </h1>
+        <h1 className="text-xl ml-2.5 grow font-bold">{GAME_TITLE}</h1>
         <InformationCircleIcon
           className="h-6 w-6 mr-2 cursor-pointer"
           onClick={() => setIsInfoModalOpen(true)}
@@ -302,7 +301,6 @@ function App() {
         isHighContrastMode={isHighContrastMode}
         handleHighContrastMode={handleHighContrastMode}
       />
-
       <Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
       <Alert
         message={WORD_NOT_FOUND_MESSAGE}
@@ -319,6 +317,8 @@ function App() {
         variant="success"
         topMost={true}
       />
+
+      <Adsense client="ca-pub-2341055165907717" slot="7806394673" />
     </div>
   )
 }
